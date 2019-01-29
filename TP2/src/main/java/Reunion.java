@@ -30,7 +30,7 @@ public class Reunion
 	 
 	@Temporal(TemporalType.DATE) 
 	@OneToOne 
-	protected Date date;
+	protected DateR date;
 
 	public Reunion(){
 		super();
@@ -62,7 +62,7 @@ public class Reunion
 	}
 
 	
-	public Date getDate() {
+	public DateR getDate() {
 		return this.date;
 	}
 
@@ -81,7 +81,7 @@ public class Reunion
 	}
 
 	
-	public void setDate(Date myDate) {
+	public void setDate(DateR myDate) {
 		this.date = myDate;
 		
 	}

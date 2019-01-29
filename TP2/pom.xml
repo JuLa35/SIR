@@ -44,6 +44,7 @@
 				<version>2.2</version>
 				<configuration>
 					<path>/</path>
+					<port>8043</port>
 				</configuration>
 			</plugin>
 
@@ -89,6 +90,11 @@
     <artifactId>hibernate-jpa-2.0-api</artifactId>
     <version>1.0.1.Final</version>
 </dependency>
+		<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
+        </dependency>
 		<!-- * End of user code for dependencies -->
 	</dependencies>
 </project>

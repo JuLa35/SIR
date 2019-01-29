@@ -10,7 +10,7 @@
 		<class>Sondage</class>
 		<class>MailAliment</class>
 		<class>Mailclear</class>
-		<class>Date</class>
+		<class>DateR</class>
 		<class>Participant</class>
 		<class>Pad</class>
 		
@@ -28,7 +28,7 @@
 			<property name="hibernate.c3p0.timeout" value="300" />
 			<property name="hibernate.c3p0.max_statements" value="50" />
 			<property name="hibernate.c3p0.idle_test_period" value="3000" />
-			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
     	</properties>
 	</persistence-unit>
 </persistence>

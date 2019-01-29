@@ -29,18 +29,19 @@ public class Participant
 
 	 
 	@ManyToOne 
-	@JoinColumn(nullable = false) 
+	@JoinColumn(nullable = true) 
 	protected Mailclear mailclear;
 
 
 	 
 	@ManyToOne 
-	@JoinColumn(nullable = false) 
+	@JoinColumn(nullable = true) 
 	protected MailAliment mailAliment;
 
 
 	@Id 
-	@Column(nullable = false) 
+	@Column(nullable = false)
+	@GeneratedValue
 	protected final Long id = 0L;
 
 
@@ -48,17 +49,17 @@ public class Participant
 		super();
 	}
 
-	private String getMail() {
+	public String getMail() {
 		return this.Mail;
 	}
 
 	
-	private String getNom() {
+	public String getNom() {
 		return this.Nom;
 	}
 
 	
-	private String getPrenom() {
+	public String getPrenom() {
 		return this.Prenom;
 	}
 
@@ -85,17 +86,17 @@ public class Participant
 		return this.id;
 	}
 
-	private void setMail(String myMail) {
+	public void setMail(String myMail) {
 		this.Mail = myMail;
 	}
 
 	
-	private void setNom(String myNom) {
+	public void setNom(String myNom) {
 		this.Nom = myNom;
 	}
 
 	
-	private void setPrenom(String myPrenom) {
+	public void setPrenom(String myPrenom) {
 		this.Prenom = myPrenom;
 	}
 

@@ -15,10 +15,12 @@ public class Sondage
 	@Column(nullable = false) 
 	protected Long id;
 
-	 
+	@Column
+	@ElementCollection(targetClass=Participant.class) 
 	protected List<Participant> ListPresent;
-
-	 
+	
+	@Column
+	@ElementCollection(targetClass=Participant.class) 
 	protected List<Participant> ListAbsent;
 
 	 
@@ -30,7 +32,7 @@ public class Sondage
 	 
 	@Temporal(TemporalType.DATE) 
 	@OneToMany(mappedBy = "sondage") 
-	protected Set<Date> date;
+	protected Set<DateR> date;
 
 
 	 
@@ -69,11 +71,11 @@ public class Sondage
 	}
 
 	
-	public Set<Date> getDate() {
+	public Set<DateR> getDate() {
 		if(this.date == null) {
-				this.date = new HashSet<Date>();
+				this.date = new HashSet<DateR>();
 		}
-		return (Set<Date>) this.date;
+		return (Set<DateR>) this.date;
 	}
 
  

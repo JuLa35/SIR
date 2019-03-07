@@ -9,8 +9,7 @@ public class Reunion
 {
 
 	 
-	@Id 
-	@Column(nullable = false) 
+	@Id @GeneratedValue(strategy=GenerationType.AUTO) 
 	protected Long id;
 
 	@Column(nullable = false) 

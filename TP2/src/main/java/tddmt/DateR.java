@@ -11,8 +11,6 @@ public class DateR
 	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	protected Long id;
 
-	 
-	@Column(nullable = false) 
 	protected String PauseDej;
 	 
 	@Column

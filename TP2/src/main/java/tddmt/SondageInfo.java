@@ -49,7 +49,7 @@ public class SondageInfo extends HttpServlet {
 				}
 			String intituleReu =  request.getParameter("intitule") ;
 			String resumeReu =  request.getParameter("resume") ;
-			//createSondage(name,lastName,mail,dateReu,intituleReu,resumeReu);
+			createSondage(name,lastName,mail,dateReu,intituleReu,resumeReu);
 			out.println("<HTML>\n<BODY>\n" +
 					"<H1>Recapitulatif des informations</H1>\n" +
 					"<UL>\n" +            
@@ -74,7 +74,7 @@ public class SondageInfo extends HttpServlet {
 		tx.commit();
 	}
 
-	/*private void createSondage(String nom, String prenom, String mail, Date dateReu,String intituleReu, String resumeReu) {
+	private void createSondage(String nom, String prenom, String mail, Date dateReu,String intituleReu, String resumeReu) {
 		//manager.createQuery("Insert Into Particpant (Nom, Prenom, Mail) VALUES ("+ nom+", "  + prenom + ", " +  mail);
 		Sondage s = new Sondage();
 		
@@ -83,17 +83,22 @@ public class SondageInfo extends HttpServlet {
 		myCreateur.setName(nom);
 		myCreateur.setMail(mail);
 		
+		Long idCrea = (long) manager.createQuery("Select id From User u Where u.firstName=\""+prenom +"\" and u.name=\""+nom +"\" and u.mail=\""+ mail +"\" ", User.class).getFirstResult();
+        System.out.println(idCrea);
+		
+		DateR date = new DateR();	
+		date.setDateReu(dateReu);
+		
 		Reunion r = new Reunion();
 		r.setIntitule(intituleReu);
 		r.setResume(resumeReu);
+		r.setDate(date.getId());
 		
-		DateR date = new DateR();
-		date.setReunion(r);
-		date.setDateReu(dateReu);
+		s.setCreateur(idCrea);
+		s.setDateR(date.getId());
 		
-		s.addDateR(date);
 		manager.persist(s);
-	}*/
+	}
 
 }
 

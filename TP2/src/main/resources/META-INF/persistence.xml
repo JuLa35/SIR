@@ -5,14 +5,14 @@
 
 	<persistence-unit name="example" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>Reunion</class>
-		<class>Createur</class>
-		<class>Sondage</class>
-		<class>MailAliment</class>
-		<class>Mailclear</class>
-		<class>DateR</class>
-		<class>Participant</class>
-		<class>Pad</class>
+		<class>tddmt.Reunion</class>
+		<class>tddmt.Sondage</class>
+		<class>tddmt.MailAliment</class>
+		<class>tddmt.Mailclear</class>
+		<class>tddmt.DateR</class>
+		<class>tddmt.Pad</class>
+		<class>tddmt.User</class>
+		<class>tddmt.Present</class>
 		
 		<properties>
 	      <property name="hibernate.archive.autodetection" value="class, hbm" />

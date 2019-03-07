@@ -8,19 +8,17 @@ import javax.persistence.*;
 public class DateR
 {
 	 
-	@Id 
-	@Column(nullable = false) 
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	protected Long id;
 
 	 
 	@Column(nullable = false) 
 	protected String PauseDej;
 	 
-	@OneToOne(mappedBy ="date")
+	@Column
 	protected Date DateReu;
 	 
-	@Column
-	protected Reunion reunion;
+	protected Long reunionId;
 
 
 	public DateR(){
@@ -44,8 +42,8 @@ public class DateR
 	}
 
 
-	public Reunion getReunion() {
-		return this.reunion;
+	public Long getReunionId() {
+		return this.reunionId;
 	}
 
 
@@ -61,8 +59,8 @@ public class DateR
 	protected void setDateReu(Date myDateReu) {
 		this.DateReu = myDateReu;
 	}
-	public void setReunion(Reunion myReunion) {
-		this.reunion = myReunion;
+	public void setReunion(Long myReunion) {
+		this.reunionId = myReunion;
 		
 	}
 

@@ -36,7 +36,7 @@ public class UserInfo extends HttpServlet {
 			String name = request.getParameter("firstname") ;
 			String lastName = request.getParameter("name");
 			String mail =  request.getParameter("mail") ;		
-			createParticipant(name,lastName,mail);
+			createUser(name,lastName,mail);
 			out.println("<HTML>\n<BODY>\n" +
 					"<H1>Recapitulatif des informations</H1>\n" +
 					"<UL>\n" +            
@@ -55,13 +55,13 @@ public class UserInfo extends HttpServlet {
 		tx.commit();
 	}
 
-	private void createParticipant(String nom, String prenom, String mail) {
+	private void createUser(String nom, String prenom, String mail) {
 		//manager.createQuery("Insert Into Particpant (Nom, Prenom, Mail) VALUES ("+ nom+", "  + prenom + ", " +  mail);
-		Participant p = new Participant();
-		p.setName(nom);
-		p.setFirstName(prenom);
-		p.setMail(mail);
-		manager.persist(p);
+		User u = new User();
+		u.setName(nom);
+		u.setFirstName(prenom);
+		u.setMail(mail);
+		manager.persist(u);
 	}
 
 }

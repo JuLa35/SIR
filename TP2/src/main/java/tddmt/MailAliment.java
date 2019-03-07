@@ -11,9 +11,8 @@ public class MailAliment
 	@Column(nullable = false) 
 	protected String Lien;
 
-	@Id 
-	@Column(nullable = false) 
-	protected final Long id = 0L;
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	protected Long id;
 
 
 	public MailAliment(){

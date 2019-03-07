@@ -45,11 +45,11 @@ public class SondageInfo extends HttpServlet {
 				String dateReuString =  request.getParameter("date") ;
 				dateReu=(Date) date.parse(dateReuString);}
 			catch (ParseException e1) {
-				out.println("la date entrÃ©e est fausse, retapez la date");
+				out.println("la date entrée est fausse, retapez la date");
 				}
 			String intituleReu =  request.getParameter("intitule") ;
 			String resumeReu =  request.getParameter("resume") ;
-			createSondage(name,lastName,mail,dateReu,intituleReu,resumeReu);
+			//createSondage(name,lastName,mail,dateReu,intituleReu,resumeReu);
 			out.println("<HTML>\n<BODY>\n" +
 					"<H1>Recapitulatif des informations</H1>\n" +
 					"<UL>\n" +            
@@ -59,11 +59,11 @@ public class SondageInfo extends HttpServlet {
 					+ name + "\n" +
 					" <LI>Mail: "
 					+ mail + "\n" +
-					" <LI>Date de rÃ©union: "
+					" <LI>Date de réunion: "
 					+ dateReu + "\n" +
-					" <LI>IntitulÃ© de rÃ©union : "
+					" <LI>Intitulé de réunion : "
 					+ intituleReu + "\n" +
-					" <LI>ResumÃ© de rÃ©union: "
+					" <LI>Resumé de réunion: "
 					+ resumeReu + "\n" +
 					"</UL>\n" +                
 					"</BODY></HTML>");
@@ -74,7 +74,7 @@ public class SondageInfo extends HttpServlet {
 		tx.commit();
 	}
 
-	private void createSondage(String nom, String prenom, String mail, Date dateReu,String intituleReu, String resumeReu) {
+	/*private void createSondage(String nom, String prenom, String mail, Date dateReu,String intituleReu, String resumeReu) {
 		//manager.createQuery("Insert Into Particpant (Nom, Prenom, Mail) VALUES ("+ nom+", "  + prenom + ", " +  mail);
 		Sondage s = new Sondage();
 		
@@ -91,10 +91,9 @@ public class SondageInfo extends HttpServlet {
 		date.setReunion(r);
 		date.setDateReu(dateReu);
 		
-		s.setCreateur(myCreateur);
 		s.addDateR(date);
 		manager.persist(s);
-	}
+	}*/
 
 }
 

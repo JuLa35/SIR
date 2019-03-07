@@ -15,8 +15,7 @@ public class User {
 	@Column(nullable = false) 
 	String mail;
 	
-	@Id 
-	@Column(nullable = false) 
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	Long id;
 
 	public String getName() {

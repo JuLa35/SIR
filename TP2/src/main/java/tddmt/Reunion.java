@@ -13,25 +13,17 @@ public class Reunion
 	@Column(nullable = false) 
 	protected Long id;
 
-
 	@Column(nullable = false) 
 	protected String Intitule;
-
 
 	@Column(nullable = false) 
 	protected String Resume;
 
- 
-	@Column
-	protected MailAliment mailAliment;
+	protected Long mailAlimentId;
 
- 
-	@Column
-	protected Mailclear mailclear;
+	protected Long mailclearId;
 	 
-	@Temporal(TemporalType.DATE) 
-	@OneToOne
-	protected DateR date;
+	protected Long dateId;
 
 	public Reunion(){
 		super();
@@ -53,18 +45,18 @@ public class Reunion
 	}
 
 	
-	public MailAliment getMailAliment() {
-		return this.mailAliment;
+	public Long getMailAliment() {
+		return this.mailAlimentId;
 	}
 
 	
-	public Mailclear getMailclear() {
-		return this.mailclear;
+	public Long getMailclear() {
+		return this.mailclearId;
 	}
 
 	
-	public DateR getDate() {
-		return this.date;
+	public Long getDate() {
+		return this.dateId;
 	}
 
 	public void setId(long myId) {
@@ -82,19 +74,19 @@ public class Reunion
 	}
 
 	
-	public void setDate(DateR myDate) {
-		this.date = myDate;
+	public void setDate(Long myDate) {
+		this.dateId = myDate;
 		
 	}
 
 
-	public void setMailAliment(MailAliment mailAliment) {
-		this.mailAliment = mailAliment;
+	public void setMailAliment(Long mailAliment) {
+		this.mailAlimentId = mailAliment;
 	}
 
 
-	public void setMailclear(Mailclear mailclear) {
-		this.mailclear = mailclear;
+	public void setMailclear(Long mailclear) {
+		this.mailclearId = mailclear;
 	}
 	
 

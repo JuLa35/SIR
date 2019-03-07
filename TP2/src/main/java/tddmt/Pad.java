@@ -6,8 +6,7 @@ public class Pad
 {
 
 	 
-	@Id 
-	@Column(nullable = false) 
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
 	protected Long id;
 
 	 

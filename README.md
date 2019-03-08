@@ -13,10 +13,18 @@ Utilisation du projet :
 
 * Créer une base de données nommée base_16006405 sur votre localhost 
 * Lancer le fichier JpaTest.java pour générer les tables (cf desgin.md pour les grands éléments d'architecture )
-* Démarrer le serveur Tomcat
+* Démarrer le serveur Tomcat par la commande suivante :
 
 ```
 mvn tomcat7:run
 ```
+Par défault le port utilisé est le *8043*.
+
+## La page d'accueil : index.html
+
+<p>Pour accèder à la page d'acceuil du projet : localhost:8043 </p>
+<p>Sur la page d'accueil on retrouve les liens pour l'ajout d'un utilisateur via *S'enregistrer* ainsi que la création d'un sondage via *Créer un sondage* qui renvoie aux lien suivants :<p>
+<p>Pour accèder à l'ajout d'un utilisateur dans la bdd : localhost:8043/myform.html</p>
+<p>Pour accèder à l'ajout d'un sondage dans la bdd : localhost:8043/mysondage.html</p>
 
 

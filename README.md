@@ -11,9 +11,9 @@ Le pad sera initialisé avec le titre de la réunion et une liste des présents 
 
 Utilisation du projet :
 
-*Créer une base de données nommée base_16006405 sur votre localhost 
-*Lancer le fichier JpaTest.java pour générer les tables (cf desgin.md pour les grands éléments d'architecture )
-*Démarrer le serveur Tomcat
+* Créer une base de données nommée base_16006405 sur votre localhost 
+* Lancer le fichier JpaTest.java pour générer les tables (cf desgin.md pour les grands éléments d'architecture )
+* Démarrer le serveur Tomcat
 
 ```
 mvn tomcat7:run

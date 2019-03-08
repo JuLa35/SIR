@@ -7,4 +7,16 @@
 <p>L’email servira d’identifiant pour les participants. 
 Le pad sera initialisé avec le titre de la réunion et une liste des présents et absents en fonction des réponses au sondage. </p>
 
+### Installation en local
+
+Utilisation du projet :
+
+*Créer une base de données nommée base_16006405 sur votre localhost 
+*Lancer le fichier JpaTest.java pour générer les tables (cf desgin.md pour les grands éléments d'architecture )
+*Démarrer le serveur Tomcat
+
+```
+mvn tomcat7:run
+```
+
 

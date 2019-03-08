@@ -40,6 +40,13 @@ L'ajout de rest afin de gérer des urls tels que :
 * */rest/removeSondage/{id}* pour supprimer le sondage avec l'id {id}
 * */rest/sondage/{id}* pour afficher le sondage avec l'id {id}
 
+### Angular :
+
+L'ajout du frontend de l'application via le framework angular afin de rendre l'appliaction plus esthétique et efficace
+
+### Autres fonctionnailtés :
+
+Nous verrons également pour ajouter d'autres fonctionnailtées si celles-ci nous semblent importantes et utiles.
 
 
 

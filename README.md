@@ -83,4 +83,6 @@ Les types stockés dans Redis sont les suivants :
 Les requêtes possibles sont les requêtes utilisant les clefs
 
 
-
+## Contributors :
+### ROYER Adrien
+### LAVAZAY Julien

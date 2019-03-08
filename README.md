@@ -9,8 +9,8 @@ Le pad sera initialisé avec le titre de la réunion et une liste des présents 
 
 Utilisation du projet :
 
-* Créer une base de données nommée base_16006405 sur votre localhost 
-* Lancer le fichier JpaTest.java pour générer les tables (cf desgin.md pour les grands éléments d'architecture )
+* Créer une base de données nommée base_16006405 sur votre localhost .
+* Lancer le fichier JpaTest.java pour générer les tables (cf desgin.md pour les grands éléments d'architecture ).
 * Démarrer le serveur Tomcat par la commande suivante :
 
 ```
@@ -42,12 +42,45 @@ L'ajout de rest afin de gérer des urls tels que :
 
 ### Angular :
 
-L'ajout du frontend de l'application via le framework angular afin de rendre l'appliaction plus esthétique et efficace
+L'ajout du frontend de l'application via le framework angular afin de rendre l'appliaction plus esthétique et efficace.
 
 ### Autres fonctionnailtés :
 
 Nous verrons également pour ajouter d'autres fonctionnailtées si celles-ci nous semblent importantes et utiles.
 
+## Les questions vues en TP :
+
+### Quelles sont les limites d’une base de données orientées document ?
+
+Rappel des principes d'une base de données orientées document. 
+L'objectif d'une base de données orientée documents est la représentation des informations plus ou moins complexes en satisfaisant les besoins suivants :
+* Flexibilité
+* Richesse de la structure
+* Autonomie
+* Sérialisation
+
+Une base de données orientées document présente des **inconvénients** : 
+* la hiérarchisation d'accès.
+* l'absence de perspective dans la base de données.
+* la perte d'autonomie des entités.
+* le manque de sécurité.
+* les jointures ne sont pas supportées
+* Utilisation élevée de la mémoire
+
+Il est plus difficile d'utiliser une BDD orientées document car la modélisation en document ne permet pas la même flexibilité dans les requêtes et les chargements de données que la modélisation relationnelle.
+
+### Quelles sont les types de données stockés dans Redis ?
+
+Les types stockés dans Redis sont les suivants :
+* String
+* Listes
+* Hash
+* Sets
+* Sets triés
+
+### Que peut on faire comme types de requêtes ?
+
+Les requêtes possibles sont les requêtes utilisant les clefs
 
 
 

@@ -21,8 +21,26 @@ Par défault le port utilisé est le **8043**.
 ## La page d'accueil : index.html
 
 Pour accèder à la page d'acceuil du projet : localhost:8043 
-<p>Sur la page d'accueil on retrouve les liens pour l'ajout d'un utilisateur via *S'enregistrer* ainsi que la création d'un sondage via <strong>Créer un sondage</strong> qui renvoie aux lien suivants :<p>
+<p>Sur la page d'accueil on retrouve les liens pour l'ajout d'un utilisateur via <strong>S'enregistrer</strong> ainsi que la création d'un sondage via <strong>Créer un sondage</strong> qui renvoie aux lien suivants :<p>
 <p>Pour accèder à l'ajout d'un utilisateur dans la bdd : localhost:8043/myform.html</p>
 <p>Pour accèder à l'ajout d'un sondage dans la bdd : localhost:8043/mysondage.html</p>
+
+## Fonctionnalité encore à développer :
+
+Plusieurs éléments de notre application ne sont pas encore disponibles, dont voici les principaux.
+
+### Rest :
+
+L'ajout de rest afin de gérer des urls tels que :
+
+* */rest/user* pour afficher tous les utilisateurs
+* */rest/user/{id}* pour afficher l'utilisateur avec l'id {id}
+* */rest/removeUser/{id}* pour supprimer l'utilisateur avec l'id {id}
+* */rest/sondage* pour afficher tous les sondages
+* */rest/removeSondage/{id}* pour supprimer le sondage avec l'id {id}
+* */rest/sondage/{id}* pour afficher le sondage avec l'id {id}
+
+
+
 
 

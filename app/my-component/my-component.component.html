@@ -1,0 +1,16 @@
+<div ng-app="">
+ 
+<p>Id: <input [(ngModel)]="id"></p>
+<p>You wrote: {{ id }}</p>
+
+</div>
+
+<div>
+<p>Filtre : <input [(ngModel)]="filter" ></p>
+<select [(ngModel)]="pokemonSelected">
+<option *ngFor="let pokemon of pokemonTab | filterPoke:'name':filter">{{pokemon.name}}</option>
+</select>
+<p> You selected : {{pokemonSelected}}</p>
+<button (click)="Go(pokemonSelected)">GO !</button>
+<p>{{pokemonInfo}}</p>
+</div>
